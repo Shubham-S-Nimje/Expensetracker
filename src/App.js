@@ -2,8 +2,7 @@
 import './Expenceitem/Expenceitem.css';
 import Expenceitem from './Expenceitem/Expenceitem';
 
-function App() {
-  const expences = [
+ const expences = [
     {
       id: 1,
       expencedate: new Date(2023,2,17),
@@ -22,36 +21,35 @@ function App() {
           Expencetitle: 'Dinner',
           Expenceprice: 500,
           Expencelocation: 'alibag'},
+          {
+            id: 4,
+            expencedate: new Date(2023,2,16),
+            Expencetitle: 'Shopping',
+            Expenceprice: 6500,
+            Expencelocation: 'Mumbai'},
   ];
+function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Expence Data</h1>
-      <Expenceitem
-      id={expences[0].id}
-      expencedate={expences[0].expencedate}
-      Expencetitle={expences[0].Expencetitle}
-      Expenceprice={expences[0].Expenceprice}
-      Expencelocation={expences[0].Expencelocation}
-      ></Expenceitem>
-      <Expenceitem
-      id={expences[1].id}
-      expencedate={expences[1].expencedate}
-      Expencetitle={expences[1].Expencetitle}
-      Expenceprice={expences[1].Expenceprice}
-      Expencelocation={expences[1].Expencelocation}
-      ></Expenceitem>
-      <Expenceitem
-      id={expences[2].id}
-      expencedate={expences[2].expencedate}
-      Expencetitle={expences[2].Expencetitle}
-      Expenceprice={expences[2].Expenceprice}
-      Expencelocation={expences[2].Expencelocation}
-      ></Expenceitem>
+        {expences.map((ele) => {
+          // const {id,expencedate,Expencetitle,Expenceprice,Expencelocation} = ele;
+          return (
+          <Expenceitem
+          key={ele.id}
+          id={ele.id}
+          expencedate={ele.expencedate}
+          Expencetitle={ele.Expencetitle}
+          Expenceprice={ele.Expenceprice}
+          Expencelocation={ele.Expencelocation}
+          ></Expenceitem>
+          // console.log(ele)
+        );
+          })}
       </header>
-      
     </div>
-  );
+  )
 }
 
 export default App;
