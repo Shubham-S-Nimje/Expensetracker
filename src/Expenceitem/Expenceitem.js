@@ -1,14 +1,13 @@
-export default function Expenceitem()
+import './Expenceitem.css';
+
+export default function Expenceitem(props)
 {
-    const expencedate = new Date(2023,2,17);
-    const Expencetitle = 'Panipuri';
-    const Expenceprice = 30;
-    const Expencelocation = 'mumbai';
-    return <div>
-        <h1>Expence Data</h1>
-        <h2>Date : {expencedate.toISOString()}</h2>
-        <h3>Expence in : {Expencetitle}</h3>
-        <p>Expence Cost : Rs. {Expenceprice}/- Only</p>
-        <p>Expence location{Expencelocation}</p>
+    return (<div className="expencedata">
+        <h3 className="id" >No. {props.id}</h3>
+        <h3 className="expencedate" >{props.expencedate.toISOString()}</h3>
+        <h3 className="Expencetitle" >{props.Expencetitle}</h3>
+        <h3 className="Expencelocation" >{props.Expencelocation}</h3>
+        <h3 className="Expenceprice" >Rs. {props.Expenceprice}/- Only</h3>
     </div>
+    );
 }
