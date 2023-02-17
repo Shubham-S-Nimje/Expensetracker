@@ -1,0 +1,8 @@
+.Expencelocation {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  color: white;
+  margin: 0px;
+  padding: 20px;
+  font-size: 30px;
+}
