@@ -1,0 +1,21 @@
+.Expences{
+  background-color:#282c34;
+  color: white;
+}
+.App{
+  padding: 10% 20% 0% 20%;
+}
+body {
+  background-color: #666666;
+  font-size: larger;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+div{
+  align-items: center;
+  align-content: end;
+}

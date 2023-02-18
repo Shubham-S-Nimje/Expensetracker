@@ -1,33 +1,9 @@
-body {
-  background-color: #666666;
-  font-size: larger;
-  font-weight: bold;
-}
-
-h1 {
-  text-align: center;
-}
 
 .expencedata {
-  text-align: center;
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
     background-color:#666666;
     margin: 10px;
     border-radius: 20px;
-}
-.App{
-  padding: 50px;
-}
-.App-header{
-  background-color:#282c34;
-  color: white;
-  border-radius: 20px;
-  padding: 20px;
-}
-
-div{
-  align-items: center;
-  align-content: end;
 }
