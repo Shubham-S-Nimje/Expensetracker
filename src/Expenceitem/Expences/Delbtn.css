@@ -1,8 +1,8 @@
-.Expenceprice {
+.delbtn {
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: #400080;
-    color: #ffffff;
+    background-color: red;
+    color: white;
     margin: 10px;
     border-radius: 20px;
     padding: 10px;
@@ -11,4 +11,4 @@
     width: 220px;
     height: auto;
     text-align: center;
-  }
+}
