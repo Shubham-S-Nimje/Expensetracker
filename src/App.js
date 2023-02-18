@@ -1,18 +1,25 @@
 import React from 'react';
-import './Expenceitem/Expences.css';
-import Expences from './Expenceitem/Expences';
+import './Expenceitem/Expences/Expences.css';
+import Expences from './Expenceitem/Expences/Expences';
 
-function App() {
+const App = () => {
   return React.createElement(
-    'div',
-    {},
-    React.createElement(Expences, {Expence: Expences})
-  );
-  
-  // return (
-  //         <Expences Expence = {props.Expences} 
-  //         />
-  // );
+        'div',
+        {},
+        React.createElement(Expences, {Expence: Expences})
+      );
 }
+// function App() {
+//   return React.createElement(
+//     'div',
+//     {},
+//     React.createElement(Expences, {Expence: Expences})
+//   );
+  
+//   // return (
+//   //         <Expences Expence = {props.Expences} 
+//   //         />
+//   // );
+// }
 
 export default App;

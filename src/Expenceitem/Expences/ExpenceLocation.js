@@ -1,5 +1,5 @@
 import './ExpenceLocation.css';
-function Expencelocationdata(props) {
+const Expencelocationdata = (props) => {
     
     return (
       <div className="Expencelocation">

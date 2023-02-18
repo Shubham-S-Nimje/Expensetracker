@@ -1,5 +1,5 @@
 import './ExpenceTitle.css';
-function Expencetitledata(props) {
+const Expencetitledata = (props) => {
     return (
       <div className="Expencetitle">
         {props.Expencetitle}

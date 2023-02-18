@@ -1,5 +1,5 @@
 import './ExpencePrice.css';
-function Expencepricedata(props) {
+const Expencepricedata = (props) => {
     
     return (
         <div className="Expenceprice">Rs. {props.Expenceprice}/- Only</div>

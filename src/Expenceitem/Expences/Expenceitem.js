@@ -2,10 +2,11 @@ import ExpenceDatedata from './ExpenceDate';
 import Expencetitledata from './ExpenceTitle';
 import Expencelocationdata from './ExpenceLocation';
 import Expencepricedata from './ExpencePrice';
-import Carddata from './Card'
+import Carddata from '../UI/Card'
 import './Expenceitem.css';
 
-export default function Expenceitem(props){return (
+const Expenceitem = (props) => {
+    return (
     <Carddata className="expencedata">
         <ExpenceDatedata Expencedate={props.Expencedate} />
         <Expencetitledata Expencetitle={props.Expencetitle} />
@@ -14,3 +15,4 @@ export default function Expenceitem(props){return (
     </Carddata>
     );
 }
+export default Expenceitem;

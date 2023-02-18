@@ -1,7 +1,7 @@
 
 import './Expenceitem.css';
 import Expenceitem from './Expenceitem';
-import Carddata from './Card';
+import Carddata from '../UI/Card';
 
  const expences = [
     {
@@ -29,7 +29,7 @@ import Carddata from './Card';
             Expenceprice: 6500,
             Expencelocation: 'Mumbai'},
   ];
-function Expences() {
+  const Expences = () => {
   return (
     <div className="App">
       <Carddata className="Expences">
