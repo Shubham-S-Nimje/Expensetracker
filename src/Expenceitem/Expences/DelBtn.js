@@ -1,11 +1,10 @@
 import './Delbtn.css';
 const ExpenceDelbtn = (props) => {
     const delExpense = () => {
-        console.log('Delete Button clicked!...');
+        console.log('updated!...');
     };
-    
     return (
-        <button className="delbtn" onClick={delExpense}>Delete Expense</button>
+        <button className="delbtn" onClick={delExpense}>X</button>
     );
 }
 export default ExpenceDelbtn;
