@@ -6,17 +6,52 @@ const ExpenceForm = () => {
   const [ontitlechange,settitlechange] = useState('');
   const [onpricechange,setpricechange] = useState('');
   const [ondatechange,setdatechange] = useState('');
+  // const [userInput,setuserInput] = useState({
+  //   ontitlechange: '',
+  //   onpricechange: '',
+  //   ondatechange: ''
+  // })
 
   const amountchangehandler = (event) => {
     settitlechange(event.target.value);
+    // setuserInput({
+    //   ...userInput,
+    //   ontitlechange: event.target.value,
+    // })
+    // setuserInput((prevState) => {
+    //   return {
+    //     ...prevState,
+    //     ontitlechange: event.target.value
+    //   };
+    // })
     console.log(event.target.value);
   };
   const titlechangehandler = (event) => {
     setpricechange(event.target.value);
+    // setuserInput({
+    //   ...userInput,
+    //   onpricechange: event.target.value,
+    // })
+    // setuserInput((prevState) => {
+    //   return {
+    //     ...prevState,
+    //     onpricechange: event.target.value
+    //   };
+    // })
     console.log(event.target.value);
   };
   const datechangehandler = (event) => {
     setdatechange(event.target.value);
+    // setuserInput({
+    //   ...userInput,
+    //   ondatechange: event.target.value,
+    // })
+    // setuserInput((prevState) => {
+    //   return {
+    //     ...prevState,
+    //     ondatechange: event.target.value
+    //   };
+    // })
     console.log(event.target.value);
   };
     return (
