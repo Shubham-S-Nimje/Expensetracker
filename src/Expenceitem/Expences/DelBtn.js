@@ -1,6 +1,7 @@
 import './Delbtn.css';
 const ExpenceDelbtn = (props) => {
     const delExpense = () => {
+        document.getElementsByClassName('expencedata').removeChild(document.getElementsByClassName('Expencetitle'))
         console.log('updated!...');
     };
     return (
