@@ -1,7 +1,8 @@
 
-import './Expenceitem.css';
+import './Expences.css';
 import Expenceitem from './Expenceitem';
 import Carddata from '../UI/Card';
+
 
  const expences = [
     {
