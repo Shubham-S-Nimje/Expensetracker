@@ -24,7 +24,7 @@ const ExpenceForm = () => {
     //     ontitlechange: event.target.value
     //   };
     // })
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
   const titlechangehandler = (event) => {
     setpricechange(event.target.value);
@@ -38,7 +38,7 @@ const ExpenceForm = () => {
     //     onpricechange: event.target.value
     //   };
     // })
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
   const datechangehandler = (event) => {
     setdatechange(event.target.value);
@@ -52,11 +52,21 @@ const ExpenceForm = () => {
     //     ondatechange: event.target.value
     //   };
     // })
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
+  const submitform = (event) => {
+    event.preventDefault();
+    const expenceData = {
+      title : ontitlechange,
+      amount : onpricechange,
+      date : new Date(ondatechange)
+    };
+    console.log(expenceData)
+
+  }
     return (
     <ExpenceCard className="expenceCard">
-      <form className="expenceform">
+      <form className="expenceform" onSubmit={submitform}>
         <div className="inputtitle">
           <label>Enter Expence Title : </label><br></br>
           <input type="text" onChange={titlechangehandler}/>
