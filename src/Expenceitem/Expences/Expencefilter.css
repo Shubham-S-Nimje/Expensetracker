@@ -1,0 +1,35 @@
+.expenceFilter {
+  background-color: #666666;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 5px;
+  width: 222px;
+  height: auto;
+  text-align: center;
+}
+.expenceFiltercontrol {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: #282c34;
+  color: #ffffff;
+  margin: 0px;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid white;
+  width: 212px;
+  height: auto;
+}
+select {
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: transparent;
+}
+option {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: transparent;
+}

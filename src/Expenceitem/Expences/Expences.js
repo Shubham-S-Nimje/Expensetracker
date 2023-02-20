@@ -1,41 +1,21 @@
 
-import './Expences.css';
 import Expenceitem from './Expenceitem';
 import Carddata from '../UI/Card';
+import Expencefilter from './Expencefilter';
+import './Expences.css';
+import { useState } from 'react';
 
-
- const expences = [
-    {
-      id: 1,
-      Expencedate: new Date(2023,2,17),
-      Expencetitle: 'Panipuri',
-      Expenceprice: 40,
-      Expencelocation: 'Mumbai'},
-      {
-        id: 2,
-        Expencedate: new Date(2023,2,16),
-        Expencetitle: 'Movie',
-        Expenceprice: 300,
-        Expencelocation: 'Pune'},
-        {
-          id: 3,
-          Expencedate: new Date(2023,2,15),
-          Expencetitle: 'Dinner',
-          Expenceprice: 500,
-          Expencelocation: 'Alibag'},
-          {
-            id: 4,
-            Expencedate: new Date(2023,2,16),
-            Expencetitle: 'Shopping',
-            Expenceprice: 6500,
-            Expencelocation: 'Mumbai'},
-  ];
-  const Expences = () => {
+  const Expences = (props) => {
+    const [filteredYear, setFilteredYear] = useState('2020');
+    const filterchangeHandler = selectedYear => {
+    setFilteredYear(selectedYear);
+    };
   return (
     <div className="App">
       <Carddata className="Expences">
         <h1>Expence Data</h1>
-        {expences.map((ele) => {
+        <Expencefilter selected={filteredYear} onChangeFilter={filterchangeHandler} />
+        {props.item.map((ele) => {
           return (
           <Expenceitem
           key={ele.id}

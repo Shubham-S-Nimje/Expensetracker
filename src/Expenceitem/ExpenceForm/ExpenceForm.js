@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import './ExpenceForm.css';
-import './Expencecard.css';
-import ExpenceCard from './Expencecard'
-const ExpenceForm = () => {
+const ExpenceForm = (props) => {
   const [ontitlechange,settitlechange] = useState('');
   const [onpricechange,setpricechange] = useState('');
   const [ondatechange,setdatechange] = useState('');
@@ -12,7 +10,7 @@ const ExpenceForm = () => {
   //   ondatechange: ''
   // })
 
-  const amountchangehandler = (event) => {
+  const titlechangehandler = (event) => {
     settitlechange(event.target.value);
     // setuserInput({
     //   ...userInput,
@@ -26,7 +24,7 @@ const ExpenceForm = () => {
     // })
     // console.log(event.target.value);
   };
-  const titlechangehandler = (event) => {
+  const amountchangehandler = (event) => {
     setpricechange(event.target.value);
     // setuserInput({
     //   ...userInput,
@@ -61,31 +59,30 @@ const ExpenceForm = () => {
       amount : onpricechange,
       date : new Date(ondatechange)
     };
-    console.log(expenceData)
+    props.onsaveexpensedata(expenceData);
+    settitlechange('');
+    setpricechange('');
+    setdatechange('');
 
   }
     return (
-    <ExpenceCard className="expenceCard">
       <form className="expenceform" onSubmit={submitform}>
         <div className="inputtitle">
           <label>Enter Expence Title : </label><br></br>
-          <input type="text" onChange={titlechangehandler}/>
+          <input type="text" value={ontitlechange} onChange={titlechangehandler}/>
         </div>
         <div className="inputamount">
           <label>Enter Expence Amount : </label><br></br>
-          <input type="number" onChange={amountchangehandler} />
+          <input type="number" value={onpricechange} onChange={amountchangehandler} />
         </div>
         <div className="inputdate">
           <label>Select Expence Date : </label><br></br>
-          <input type="date" min="2023-01-01" max="2023-12-31" onChange={datechangehandler}/>
+          <input type="date" min="2023-01-01" max="2023-12-31" value={ondatechange} onChange={datechangehandler}/>
         </div>
         <div className="submitbtn">
           <button type="submit" className="btn">Submit</button>
         </div>
-        
       </form>
-      </ExpenceCard>
-      
     );
 }
 export default ExpenceForm;
