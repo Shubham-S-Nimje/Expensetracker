@@ -56,7 +56,7 @@ const ExpenceForm = (props) => {
     event.preventDefault();
     const expenceData = {
       Expencetitle : ontitlechange,
-      Expenceprice : onpricechange,
+      Expenceprice : +onpricechange,
       Expencedate : new Date(ondatechange)
     };
     props.onsaveexpensedata(expenceData);
