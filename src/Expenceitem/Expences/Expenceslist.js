@@ -3,9 +3,12 @@ import Expenceitem from './Expenceitem';
 import './Expenceslist.css';
 
   const Expenceslist = (props) => {
-
+    let expenceContent = '';
     if(props.item.length === 0) {
-      return <p>No Expenses Found</p>
+      expenceContent = <p>No Expenses Found</p>
+    }
+    else if(props.item.length === 1) {
+      expenceContent = <p>Only single Expense here. Please add more...</p>
     }
   return (
     <div className="Expenceslist">
@@ -18,6 +21,7 @@ import './Expenceslist.css';
           Expencelocation={ele.Expencelocation}
           />
       ))}
+      {expenceContent}
     </div>
   )
 }
