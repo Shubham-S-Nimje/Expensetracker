@@ -11,11 +11,12 @@ import './Delbtn.css';
    
 const Expenceitem = (props) => {
    const [title, setTitle] = useState(props.Expencetitle);
-   const [price, setPrice] = useState(props.Expenceprice);
     const Updatetitle = () => {
         setTitle('Updated');
         console.log(title);
     };
+
+    const [price, setPrice] = useState(props.Expenceprice);
     const Updateprice = () => {
         setPrice('100');
         console.log(price);

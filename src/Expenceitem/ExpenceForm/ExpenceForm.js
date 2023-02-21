@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './ExpenceForm.css';
 const ExpenceForm = (props) => {
-  const [ontitlechange,settitlechange] = useState('');
-  const [onpricechange,setpricechange] = useState('');
-  const [ondatechange,setdatechange] = useState('');
+  const [ontitlechange,settitlechange] = useState('')
+  const [onpricechange,setpricechange] = useState('')
+  const [ondatechange,setdatechange] = useState('')
   // const [userInput,setuserInput] = useState({
   //   ontitlechange: '',
   //   onpricechange: '',
@@ -39,7 +39,7 @@ const ExpenceForm = (props) => {
     // console.log(event.target.value);
   };
   const datechangehandler = (event) => {
-    setdatechange(event.target.value);
+    setdatechange(event.target.value)
     // setuserInput({
     //   ...userInput,
     //   ondatechange: event.target.value,
@@ -55,9 +55,9 @@ const ExpenceForm = (props) => {
   const submitform = (event) => {
     event.preventDefault();
     const expenceData = {
-      title : ontitlechange,
-      amount : onpricechange,
-      date : new Date(ondatechange)
+      Expencetitle : ontitlechange,
+      Expenceprice : onpricechange,
+      Expencedate : new Date(ondatechange)
     };
     props.onsaveexpensedata(expenceData);
     settitlechange('');

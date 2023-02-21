@@ -4,8 +4,7 @@ import ExpenceForm from './ExpenceForm'
 const ExpenceCard = (props) => {
     const saveexpensedata = (enteredExpensedata) => {
         const expenceData = {
-            ...enteredExpensedata,
-            id: Math.random().toString()
+            id: Math.random().toLocaleString(), ...enteredExpensedata
           };
         //   console.log(expenceData)
           props.onAddExpences(expenceData);

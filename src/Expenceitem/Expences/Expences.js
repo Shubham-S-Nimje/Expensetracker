@@ -1,12 +1,12 @@
-
+import { useState } from 'react';
 import Expenceitem from './Expenceitem';
 import Carddata from '../UI/Card';
 import Expencefilter from './Expencefilter';
 import './Expences.css';
-import { useState } from 'react';
+
 
   const Expences = (props) => {
-    const [filteredYear, setFilteredYear] = useState('2020');
+    const [filteredYear, setFilteredYear] = useState('2023');
     const filterchangeHandler = selectedYear => {
     setFilteredYear(selectedYear);
     };
@@ -15,18 +15,16 @@ import { useState } from 'react';
       <Carddata className="Expences">
         <h1>Expence Data</h1>
         <Expencefilter selected={filteredYear} onChangeFilter={filterchangeHandler} />
-        {props.item.map((ele) => {
-          return (
+        {props.item.map((ele) => (
           <Expenceitem
           key={ele.id}
-          id={ele.id}
           Expencedate={ele.Expencedate}
           Expencetitle={ele.Expencetitle}
           Expenceprice={ele.Expenceprice}
           Expencelocation={ele.Expencelocation}
           />
-        );
-          })}
+        
+        ))}
       </Carddata>
     </div>
   )
