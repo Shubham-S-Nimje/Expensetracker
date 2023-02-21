@@ -80,7 +80,8 @@ const ExpenceForm = (props) => {
           <input type="date" min="2023-01-01" max="2023-12-31" value={ondatechange} onChange={datechangehandler}/>
         </div>
         <div className="submitbtn">
-          <button type="submit" className="btn">Submit</button>
+          <button type="cancel" className="btn" onClick={props.onCancel}>Cancel</button>
+          <button type="submit" className="btn canbtn">Submit</button>
         </div>
       </form>
     );
